@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>Scientific Calculator developed by: Bryan Angelo Pedrosa</title>
+<HTA:APPLICATION
+    APPLICATIONNAME="Scientific Calculator"
+	APPLICATION SYSMENU="yes"
+    border="thin"
+    MAXIMIZEBUTTON="no"
+    MINIMIZEBUTTON="yes"
+    CLOSEBUTTON="yes"
+    SCROLLFLAT="no"
+    CAPTION="yes"
+    SELECTION="no"
+    INNERBORDER="yes"
+    SCROLL="no"
+	ICON=""
+    SHOWINTASKBAR="yes"
+    SINGLEINSTANCE="no"
+    SYSMENU="yes"
+    WINDOWSTATE="normal"
+ />
+ <style type="text/CSS">
+	body{
+		background-color: #000045;
+	}
+	p.error{
+		color: #FF0000;
+	}
+	p.normal{
+		color: #00FF00;
+	}
+	textarea{
+		color: #00FF00;
+		font-size: 25px;
+		resize: none;
+		text-align:right;
+		background-color: #474747;
+	}
+	input{
+		 width: 500px;
+		 height: 35px;
+		 font-size: 15pt;
+	}
+	button{
+		cursor: pointer;
+	}
+	
+	.column {
+		float: left;
+		position: relative;
+		width: 20%;
+		background: #ADD8E6;
+		border: 1px solid #e6e6e6;
+		box-sizing: border-box;
+	}
+
+	.column-offset-1 {
+		left: 0%;
+	}
+	.column-offset-2 {
+		left: 10%;
+	}
+	.column-offset-3 {
+		left: 20%;
+	}
+	.column-offset-4 {
+		left: 25%;
+	}
+	
+	
+	.basic-opersators{
+		wid
+	}
+ </style>
+ <script language="javascript" type="text/javascript">
+function enter(){
+		var x = document.getElementById("input").value;
+		document.getElementById("output").value = x ;
+ }
+
+ function syn_error(x){
+		var x="syntax error";
+		return x;
+ }
+ 
+ function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+</script>
+ </head>
+ <body>
+ <div align="center">
+ <textarea rows="2" cols="61" id="output" onkeydown="return false;" ondrag="return false;"></textarea>
+</div>
+<div>
+<form action="#">
+<input type="text" class="textfield" value="" id="input" onkeypress="return isNumber(event)"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="enter()"><b>CALCULATE</b></button>
+</form>
+</div>
+<div class="container">
+	<div class="column column-offset-1"><p>asoooooooooooooooooooooooooooooooooooooooooooooooooooooooo</p></div>
+	<div class="column column-offset-2">
+		<table>
+			<tr>
+				<td><button>7</button></td>
+				<td><button>8</button></td>
+				<td><button>9</button></td>
+			</tr>
+			<tr>
+				<td><button>4</button></td>
+				<td><button>5</button></td>
+				<td><button>6</button></td>
+			</tr>
+			<tr>
+				<td><button>1</button></td>
+				<td><button>2</button></td>
+				<td><button>3</button></td>
+			</tr>
+				<td><button>0</button></td>
+				<td></td>
+				<td><button>.</button></td>
+			</tr>
+		</table>
+</div>
+	<div class="column column-offset-4"><p>asoooooooo</p></div>
+	</div>
+</div>
+ </body>
+ </html>
